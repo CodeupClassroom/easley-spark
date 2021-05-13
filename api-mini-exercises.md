@@ -140,3 +140,36 @@ pandas_dataframe = pd.DataFrame({
        value.
     1. Sort by `abool`, `group`, and `n`. Does it matter in what order you
        specify the columns when sorting?
+
+1. Spark SQL
+
+    1. Use the starter code above to re-create a spark dataframe.
+    1. Turn your dataframe into a table that can be queried with spark SQL. Name
+       the table `my_df`. Answer the rest of the questions in this section with
+       a spark sql query (`spark.sql`) against `my_df`. After each step, view
+       the first 7 records from the dataframe.
+    1. Write a query that shows all of the columns from your dataframe.
+    1. Write a query that shows just the `n` and `abool` columns from the
+       dataframe.
+    1. Write a query that shows just the `n` and `group` columns. Rename the
+       `group` column to `g`.
+    1. Write a query that selects `n`, and creates two new columns: `n2`, the
+       original `n` values halved, and `n3`: the original n values minus 1.
+    1. What happens if you make a SQL syntax error in your query?
+
+1. Aggregating
+
+    1. What is the average `n` value for each group in the `group` column?
+    1. What is the maximum `n` value for each group in the `group` column?
+    1. What is the minimum `n` value by `abool`?
+    1. What is the average `n` value for each unique combination of the `group`
+       and `abool` column?
+
+---
+
+Revisit the exercises for the [pandas dataframes lesson][1] and [the advanced
+dataframes lesson][2]. Complete the exercises, but convert the pandas dataframes
+to spark dataframes first in order to practice using the spark api.
+
+[1]: https://ds.codeup.com/python/dataframes/
+[2]: https://ds.codeup.com/python/advanced-dataframes/
